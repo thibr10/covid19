@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-//import RefreshIcon from '../../../Assets/Images/refresh.svg'
+import RefreshIcon from '../../../Assets/Images/refresh.svg'
 import { Card, Typography, Button, Select, MenuItem } from '../../../Components'
 import COUNTRIES from '../../../Commons/Constants/Countries'
 import { CardPanelContentStyled, ItemStyled } from './Style'
