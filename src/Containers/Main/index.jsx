@@ -6,7 +6,7 @@ import { ContainerStyled } from './Style'
 
 function Main() {
   const [data, setData] = useState({})
-  const [Country, setCountry] = useState('brazil')
+  const [Country, setCountry] = useState('world')
   const updateAt = new Date().toLocaleString()
 
   const getCovidData = useCallback((Country) => {

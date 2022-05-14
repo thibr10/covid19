@@ -9,10 +9,10 @@ function Board({ data }) {
  const getValue = (value) => value ? value : <Skeleton variant="text" width={182} height={60} />
 
  return (
-  <Grid container spacing={4}>
+  <Grid container spacing={1}>
 
    <Grid item xs={12} md={3}>
-    <Card value={getValue(cases)} label="Total de casos" color="#5d78ff" />
+    <Card value={getValue(cases)} label="Total de casos" color="#011a9b" />
    </Grid>
 
    <Grid item xs={12} md={3}>
@@ -20,15 +20,15 @@ function Board({ data }) {
    </Grid>
 
    <Grid item xs={12} md={3}>
-    <Card value={getValue(todayCases)} label="Casos hoje" color="#000" />
+    <Card value={getValue(todayCases)} label="Casos hoje" color="#000000" />
    </Grid>
 
    <Grid item xs={12} md={3}>
-    <Card value={getValue(deaths)} label="Total de mortos" color="#E95078" />
+    <Card value={getValue(deaths)} label="Total de mortos" color="#c30f3f" />
    </Grid>
 
    <Grid item xs={12} md={3}>
-    <Card value={getValue(recovered)} label="Total de recuperados" color="#67C887" />
+    <Card value={getValue(recovered)} label="Total de Recuperados" color="#006723" />
    </Grid>
   </Grid>
  )
