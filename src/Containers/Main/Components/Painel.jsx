@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import RefreshIcon from '../../../Assets/Images/refresh.svg'
 import { Card, Typography, Button, Select, MenuItem } from '../../../Components'
 import COUNTRIES from '../../../Commons/Constants/Countries'
-import { CardPanelContentStyled, ItemStyled } from './Style'
+import { CardPainelContentStyled, ItemStyled } from './Style'
 
 const navigatorHasShare = navigator.share
 
@@ -28,13 +28,13 @@ function Painel({ updateAt, onChange, data, Country, getCovidData }) {
   navigator.share({
    title: `Dados do Covid19 - ${Country}`,
    text: textCovid19,
-   url: 'https://covid19dio.netlify.app/'
+   //url: 'https://covid19dio.netlify.app/'
   })
  }
 
  const renderShareButton = (
   <div>
-   <Button variant="contained" color="primary" onClick={shareInfo}>
+   <Button variant="container" color="primary" onClick={shareInfo}>
     Compartilhar
    </Button>
   </div>
@@ -42,7 +42,7 @@ function Painel({ updateAt, onChange, data, Country, getCovidData }) {
 
  const renderCopyButton = (
   <div>
-   <Button variant="contained" color="primary" onClick={copyInfo}>
+   <Button variant="container" color="primary" onClick={copyInfo}>
     Copiar
    </Button>
   </div>
@@ -50,7 +50,7 @@ function Painel({ updateAt, onChange, data, Country, getCovidData }) {
 
  return (
   <Card>
-   <CardPanelContentStyled>
+   <CardPainelContentStyled>
     <div>
      <Typography variant="h5" component="span" color="primary">COVID19</Typography>
      <Typography variant="h6" component="span" color="primary">Painel Coronavírus</Typography>
@@ -62,7 +62,7 @@ function Painel({ updateAt, onChange, data, Country, getCovidData }) {
      </div>
     </div>
     {navigatorHasShare ? renderShareButton : renderCopyButton}
-   </CardPanelContentStyled>
+   </CardPainelContentStyled>
   </Card>
  )
 }

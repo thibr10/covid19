@@ -26,16 +26,15 @@ function Main() {
   return (
     <ContainerStyled>
       <div className="mb-2">
-        <Painel>
+        <Painel
           data={data}
           updateAt={updateAt}
           onChange={handleChange}
           Country={Country}
           getCovidData={getCovidData}
-        </Painel>
+        />
       </div>
       <Board data={data} />
-
     </ContainerStyled>
   )
 }
